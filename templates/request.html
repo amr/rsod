@@ -1,0 +1,35 @@
+<%inherit file="base.html" />
+
+<%def name="content()">
+% if not request:
+<form class="tunnel-request" action="/request" method="post">
+    <fieldset>
+        <legend>Address</legend>
+        <div class="form-item">
+            <label for="host">Your Host:</label>
+            <input type="text" size="30" name="host" id="host" />
+        </div>
+        
+        <div class="form-item">
+            <label for="port">Local Port:</label>
+            <input type="text" size="6" name="port" id="port" />
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Authentication</legend>
+        <div class="form-item">
+            <label for="user">A valid user on Host:</label>
+            <input type="text" size="30" name="user" id="user" />
+            <p class="description">This user must be configured to allow passwordless SSH connections from the recipient of this request.</p>
+        </div>
+    </fieldset>
+
+    <div class="form-item">
+        <input type="submit" value="Generate" id="submit" class="form-submit form-button" />
+    </div>
+</form>
+% else:
+<p>This is not yet implemented.</p>
+% endif
+</%def>

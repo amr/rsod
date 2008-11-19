@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <title>RSOD | ${title}</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+
+    <link rel="stylesheet" type="text/css" media="all" href="/static/css/rsod.css" title="RSOD Layout" />
+    ${self.head()}
+</head>
+<body>
+<div class="header">
+${self.header()}
+</div>
+
+<div class="wrapper">
+  <h3 class="rsod">RSOD</h3>
+
+  <div class="sidebar sidebar-left">
+  ${self.sidebar()}
+  </div>
+
+  <div class="content">
+  ${self.content()}
+  </div>
+
+  <div class="footer">
+  ${self.footer()}
+  </div>
+</div>
+</body>
+</html>
+
+<%def name="head()">
+</%def>
+<%def name="header()">
+  <h1>${title}</h1>
+</%def>
+<%def name="content()">
+</%def>
+<%def name="sidebar()">
+    <h2>Quick Navigation</h2>
+    <ul>
+        <li><a href="/">Start page</a></li>
+        <li><a href="/manage">Manage running tunnels</a></li>
+        <li><a href="/create">Create a new tunnel</a></li>
+        <li><a href="/request">Create an RSOD Request</a></li>
+    </ul>
+</%def>
+<%def name="footer()">
+</%def>

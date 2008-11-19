@@ -1,0 +1,13 @@
+<%inherit file="base.html" /> 
+
+<%def name="content()">
+% if closed:
+    <p>Tunnel closed successfully.</p>
+% else:
+    % if message:
+        <p>${message}</p>
+    % else:
+        <p>Unknown error.</p>
+    % endif
+% endif
+</%def>

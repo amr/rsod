@@ -1,0 +1,27 @@
+<%inherit file="base.html" />
+
+<%def name="content()">
+<div class="start">
+<h2>What do you want to do?</h2>
+<div class="primary-tasks">
+    <div class="task">
+        <h3><a href="/create">Create a tunnel</a></h3>
+        <p>You can create a Reverse SSH tunnel for somebody by uploading their RSOD Request file.<p>
+        <p>RSOD will allow you to shut down the tunnel any time you ask it to.</p>
+    </div>
+    
+    <div class="task">
+        <h3><a href="/manage">Manage active tunnels</a></h3>
+        <p>Manage active tunnels and close unneeded ones.
+    </div>
+    
+    <div class="task">
+        <h3><a href="/request">Create a Request</a></h3>
+        <p>Generate a Request for Reverse SSH.</p>
+        <p>RSOD will generate a file with your host information, to facilitate its communication.</p>
+        <o>RSOD <a href="/create">Tunnel Creation</a> form support this file; Thus, you can hand a request to someone who will feed it to RSOD on their machine and a tunnel will be created with the relevant information. Useful when working with less technical people.</p>
+    </div>
+</div>
+
+</div>
+</%def>

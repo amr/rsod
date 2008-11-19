@@ -1,0 +1,30 @@
+<%inherit file="base.html" />
+
+<%def name="content()">
+
+% if not len(tunnels):
+  <p>There are currently no active tunnels.</p>
+% else:
+  <table class="tunnels" border="1">
+    <thead>
+      <th>PID</th>
+      <th>Host</th>
+      <th>Port</th>
+      <th>Remote User</th>
+      <th>Operations</th>
+    </thead>
+
+    <tbody>
+    % for tunnel in tunnels:
+      <tr>
+        <td>${tunnel['pid']}</td>
+        <td>${tunnel['host']}</td>
+        <td>${tunnel['port']}</td>
+        <td>${tunnel['user']}</td>
+        <td><a href="/manage/close/${tunnel['pid']}">Close</a>
+      </tr>
+    % endfor
+    </tbody>
+  </table>
+% endif
+</%def>

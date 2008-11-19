@@ -1,0 +1,30 @@
+<%inherit file="base.html" />
+
+<%def name="content()">
+<form class="tunnel-create" action="/create" method="post">
+    <fieldset>
+        <legend>Address</legend>
+        <div class="form-item">
+            <label for="host">Remote Host:</label>
+            <input type="text" size="30" name="host" id="host" />
+        </div>
+        
+        <div class="form-item">
+            <label for="port">Remote Port:</label>
+            <input type="text" size="6" name="port" id="port" />
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Authentication</legend>
+        <div class="form-item">
+            <label for="user">Remote User:</label>
+            <input type="text" size="30" name="user" id="user" />
+        </div>
+    </fieldset>
+
+    <div class="form-item">
+        <input type="submit" value="Create" id="submit" class="form-submit form-button" />
+    </div>
+</form>
+</%def>

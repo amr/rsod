@@ -1,0 +1,14 @@
+<%inherit file="base.html" /> 
+
+<%def name="content()">
+% if len(tunnels):
+    <form action="/manage/close/${tunnel['pid']}" method="post" id="tunnel-close" name="tunnel_close">
+        <p>Are you sure you would like to close the following tunnel?</p>
+        <p>Host: ${tunnel['host']}; Port: ${tunnel['port']}; User: ${tunnel['user']}</p>
+
+        <input type="submit" name="submit" id="submit" value="Yes, close this tunnel" />
+     </form>
+% else:
+    <p>There are no active tunnels with this PID.</p>
+% endif
+</%def>

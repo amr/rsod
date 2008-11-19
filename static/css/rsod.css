@@ -1,0 +1,62 @@
+html, body {
+  margin: 0;
+  padding: 0;
+
+  font-family: Georgia, serif;
+}
+
+.wrapper {
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header {
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 1px solid #ccc;
+}
+
+.wrapper h3.rsod {
+  margin-top: -5px;
+  float: right;
+}
+
+.sidebar {
+  float: left;
+  width: 250px;
+  margin: 0;
+  border-right: 1px solid #ccc;
+}
+
+.content {
+  float: left;
+  width: 768px;
+  margin-left: 25px;
+}
+
+.footer {
+  clear: both;
+}
+
+.task {
+  float: left;
+  width: 30%;
+  margin-left: 10%;
+}
+
+.clear {
+  clear: both;
+}
+
+fieldset {
+  margin-bottom: 20px;
+}
+
+legend {
+  font-weight: bold;
+  font-size: 120%;
+}
+
+.form-item {
+  padding: .25em;
+}
